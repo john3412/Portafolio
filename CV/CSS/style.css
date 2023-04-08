@@ -1,0 +1,465 @@
+:root {
+    --primary-color: #000000;
+    --primary-color-2: #171717;
+    --secondary-color: #577BC1;
+    --hover-socondary-color: #3f5b94;
+    --hover-secondary-color-2: #9abdfd;
+    --white-color: #F9F9F9;
+    --white-color-2: #e6e6e6;
+    --white-color-3: #c7c7c7;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para box model */
+}
+
+*, *:before, *:after { /*Selector universal (*) Paul Irish*/
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Sombra*/
+.sombra{
+    /*-webkit-box-shadow: 4px 12px 71px -17px rgba(201,201,201,1);*/
+    /*-moz-box-shadow: 4px 12px 71px -17px rgba(201,201,201,1);*/
+    box-shadow: 4px 12px 71px -17px rgb(66, 65, 65);
+    background-color: var(--primary-color-2);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Titulos*/
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p, .li {
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+.centrar-texto {
+    text-align: center!important;
+}
+
+.aling-img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.typed {
+    font-size: 1.9rem;
+    margin: 0;
+}
+
+
+/*Header*/
+.portada {
+    background-image: url(../Imagenes/portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 600px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.bg-portada {
+    position: inherit;
+    background-color: rgb(0 0 0 / 50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--white-color);
+}
+
+.cabecera-contacto{
+    background-image: linear-gradient(to top, var(--hover-socondary-color) 0%, var(--secondary-color) 100%);
+}
+
+.home:hover {
+    transform: scale(1.2);
+}
+
+.color-azul {
+    color: var(--secondary-color);
+}
+
+.contenedor{
+    max-width: 120rem; /*Tamaño maximo de 1200px*/
+    width: 95%;
+    margin: 0 auto; /*Centramos el contenido que esta dentro de la clase .contenedor*/
+}
+
+#centrar {
+    margin: auto;
+    border: 2px solid var(--hover-socondary-color);
+    border-radius: 50%;
+}
+
+@media (min-width: 150px) {
+    #centrar {
+        max-width: none;
+        width: 300px;
+        height: 300px;
+    }
+}
+.boton-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton {
+    background-color: var(--hover-socondary-color);
+    color: var(--white-color);
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 90%;
+    border-radius: 0.6rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton:hover {
+    background-color: var(--hover-secondary-color-2);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.box-icon {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.sobre-mi {
+    color: var(--white-color);
+}
+
+.resumen {
+    text-align: center;
+}
+
+.educacion-experiencia h4{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.year {
+    font-size: 16px;
+    background: var(--white-color-3);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+.columna {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 2rem;
+    }
+}
+
+/*Habilidades*/
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .box-container {
+            grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.texto-habilidad {
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidades .iconos {
+    width: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconos img:hover {
+    transform: scale(1.15);
+}
+/*FOOTER*/
+.footer {
+    background-image: linear-gradient(to top, var(--hover-socondary-color) 0%, var(--secondary-color) 100%);
+    padding-bottom: 1rem;
+    display: block;
+}
+
+.texto-footer {
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--white-color-3);
+    margin: 0;
+}
+
+
+@media (min-width: 248px) {
+    .centrar{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+        padding: 3rem 0;
+        border-bottom: 1px solid var(--white-color-3);
+    }
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly   ;
+    align-items: center;
+}
+
+.cursor:hover {
+    transform: scale(1.2);
+}
+
+.parrafo-footer {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*Botón WhatsApp*/
+.whatsapp-button {
+    border: 2px solid var(--primary-color);
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    z-index: 2; /*establece el orden de apilamiento del elemento, de modo que aparece encima de la mayoría de los demás elementos de la página*/
+    bottom: 5rem;
+    right: 2rem;
+    border-radius: 60px;
+    background: var(--hover-socondary-color);
+    padding: 7px 7px 9px 9px;
+    box-sizing: border-box; /*especifica el modelo de tamaño de cuadro para el elemento, lo que significa que el relleno y el borde se incluyen en el ancho y alto total del elemento.*/
+}
+
+.whatsapp-button:hover {
+    background-color: var(--hover-secondary-color-2);
+}
+
+#btn-web {
+    display: block;
+}
+
+/*Contacto*/
+.portada-contacto {
+    background-image: url(../Imagenes/contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 100rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/*Formulario*/
+.formulario {
+    background-color: transparent;
+    width: min(100rem, 100%); /*Utiliza el valor mas pequeño*/
+    margin: 0 auto; /*Centra horizontalmente y se utiliza si la clase padre no tiene un display flex declarado o no existe una clase padre*/
+    padding: 2rem; /*Expandimos 20px arriba*/
+    border-radius: 0.3rem; /*Redondeamos las esquinas con tamaño de 10px*/
+}
+
+.rojo {
+    color: red;
+}
+
+.parrafo-legend {
+    font-size: 1.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--white-color);
+}
+
+@media (min-width: 768px) {
+    .field-contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 1rem;
+    }
+}
+
+.field-contenedor {
+    font-size: 2rem;
+}
+
+.field { /*Pseudoclase que nos permite seleccionar al tercer y cuarto hijo de la clase .campo*/
+    grid-column: 1 / 3; /*Extienda el input del tercer y cuarto hijo hasta la tercera columna*/
+}
+
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    color: var(--white-color); /*Color de letra blanco*/
+    font-weight: bold; /*Ponemos en negritas el texto*/
+    margin-bottom: 0.5rem; /*Colocamos una separción con el elmento de abajo de 5px*/
+    display: block; /*Los labels ocupan todo el espacio disponible*/
+}
+
+.input-text{
+    width: 100%; /*Le indicamos que ocupe tode el espacio disponible*/
+    border: none; /*Le quitamos el borde que viene por defecto*/
+    padding: 1.5rem; /*Cada input tiene una altura o separacion de 15px*/
+    border-radius: 0.1rem; /*Redondeamos las esquinas con tamaño de 1px*/
+}
+
+.field textarea{
+    height: 25rem; /*Le damos una altura de 20px al textarea*/
+}
+
+.flex {
+    justify-content: flex-end;
+}
+
+.alinear-izquierda {
+    display: flex; /*Se usa un display flex para el flexbox y alinear el contenido*/
+}
+
+.dgn-style{
+    margin-top: 1rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .dgn-style{
+        width: auto;
+    }
+}
+
+.error {
+    background-color: red;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+}
+
+.correcto {
+    background-color: var(--hover-socondary-color);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+    transition: 200ms;
+}
+
+
+.carousel img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 3rem 0;
+}
+
+
+
+.boton-carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
